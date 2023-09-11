@@ -8,22 +8,22 @@
 </head>
 
 
-<body>
+<body class="body">
 
 <form class="formulario">
 
-    <h1>Ingresar datos</h1>
+    <h1 class="titulo">Ingresar Datos</h1>
     <label>Nombre:</label>
-    <input type="text" class="entradas" placeholder="Name"> 
+    <input type="text" class="entradas" placeholder="Name" required> 
     <br/> <br/>
     <label>Apellido:</label>
-    <input type="text" class="entradas" placeholder="Surname">
+    <input type="text" class="entradas" placeholder="Surname" required>
     <br><br/>
     <label>Correo:</label>
-    <input type="text"  class="entradas" name="email" placeholder="Email">
+    <input type="email"  class="entradas" name="email" placeholder="Email"required>
     <br/> <br/>
     <label>Contraseña:</label>
-    <input type="password" class="entradas" name="password" placeholder="Password">
+    <input type="password" class="entradas" name="password" placeholder="Password"required>
     <br/> <br/>
     <input class="botonverde" type="submit" onclick="Enviar()">
     <input class="botonrojo" type="reset"  onclick="Reset()" value="Resetear">
