@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
 </head>
-
-
 <body>
 
 <form class="formulario">
 
     <h1 class="titulo">Ingresar Datos</h1>
     <label>User:</label>
-    <input type="text" class="entradas" id="user" placeholder="User">
+    <input name="user" type="text" class="entradas" id="user" placeholder="User" required>
     <br><br/>
     <label>Correo:</label>
-    <input type="email"  class="entradas" id="email" placeholder="Email">
+    <input name="email" type="email"  class="entradas" id="email" placeholder="Email" required>
     <br/> <br/>
-    <label>Contraseña:</label>
-    <input type="password" class="entradas" id="pass" placeholder="Password">
+    <label>Contrase&ntildea:</label>
+    <input name="pass" type="password" class="entradas" id="pass" placeholder="Password" required>
     <br/> <br/>
-    <button class="botonverde" onclick="Enviar()">Enviar</button>
-    <button class="botonrojo"  onclick="Reset()" >Reset</button>
+    <button class="botonverde" id="enviar">Enviar</button>
+    <button class="botonrojo" onclick="Reset()">Reset</button>
 
 </form>
 <script src="index.js"></script>

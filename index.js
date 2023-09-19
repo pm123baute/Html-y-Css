@@ -1,25 +1,24 @@
-import mysql from 'mysql';
-var sql = "SELECT `ID`,`NombreCompleto` From registros WHERE User=? AND Contraseña=? AND Email=?"
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'casa'
+document.getElementById('enviar').addEventListener('click', function() {
+   
+  const url = 'http://127.0.0.1:8080/api';
+  const data = {
+    user: document.getElementById("user").value,
+    email: document.getElementById("email").value,
+    pass: document.getElementById("pass").value
+  };
+  console.log(data);
+  console.log(JSON.stringify(data));
+  fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(result => console.log(result))
 });
 
-export function Enviar() {
-    
-    connection.connect()
-
-    connection.query(sql, function (error, results, fields) {
-        if (error) throw error;        
-        console.log(results);
-        connection.end();
-      });
-    
-}
-
-
 function Reset(){
-    form.Reset();
+  form.Reset();
 }
